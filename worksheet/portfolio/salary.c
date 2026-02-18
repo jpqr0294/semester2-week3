@@ -14,11 +14,12 @@
    float niRate = 0.08;
    float taxRate = 0.15;
    int taxFree = 12500;
-   float takehome, nicont, taxcont;
+   float takehome, newsal, nicont, taxcont;
 
     // calculate the deductions and final take-home salary
    nicont = salary * niRate;
-   taxcont = (salary - taxFree) * taxRate;
+   newsal = salary - nicont;
+   taxcont = (newsal - taxFree) * taxRate;
 
    takehome = salary - nicont - taxcont;
 
